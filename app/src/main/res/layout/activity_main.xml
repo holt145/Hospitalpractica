@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hospital.hospitalpractica.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <LinearLayout
+            android:id="@+id/Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:text="@string/nombre_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/NPaciente" />
+            <EditText
+                android:id="@+id/TE1"
+                android:hint="nombre del paciente"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/NPaciente"/>
+            <TextView
+                android:text="@string/edad_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/EPaciente" />
+            <EditText
+                android:id="@+id/TE2"
+                android:hint="edad del paciente"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/EPaciente"/>
+            <TextView
+                android:text="@string/correo_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/CPaciente" />
+            <EditText
+                android:id="@+id/TE3"
+                android:hint="correo del paciente"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/CPaciente"/>
+            <TextView
+                android:text="@string/tel_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/TPaciente" />
+            <EditText
+                android:id="@+id/TE4"
+                android:hint="telefono del paciente"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/TPaciente"/>
+            <TextView
+                android:text="@string/Direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/direccion" />
+            <EditText
+                android:id="@+id/TE5"
+                android:hint="direccion de domicilio"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/direccion"/>
+            <ImageButton
+                android:id="@+id/Foto_del_paciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+            <TextView
+                android:id="@+id/targeturi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                />
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="@string/Padecimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/padecimiento" />
+            <EditText
+                android:id="@+id/TE6"
+                android:hint="que sintomas presenta?"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/padecimiento"/>
+            <TextView
+                android:text="@string/Fecha_cita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/FCita" />
+            <EditText
+                android:id="@+id/TE7"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="date"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/FCita"/>
+            <TextView
+                android:text="@string/Hora_Cita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/HCita" />
+            <EditText
+                android:id="@+id/TE8"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="time"
+                android:layout_alignParentLeft="true"
+                android:layout_toRightOf="@+id/HCita"/>
+            <TextView
+                android:text="@string/Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/Edoctor" />
+            <Spinner
+                android:id="@+id/doctor_spinner"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/Edoctor"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Guardar"
+                android:id="@+id/botonguardar"
+                android:onClick="toastEvent"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
